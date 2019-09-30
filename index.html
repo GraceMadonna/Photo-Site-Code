@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Grace Madonna Photography</title>
+	<link rel="shortcut icon" type="image/png" href="images/Favicon.png"/>
+	<!-- media sizing https://www.smashingmagazine.com/2010/07/how-to-use-css3-media-queries-to-create-a-mobile-version-of-your-website/ -->
+	<link href="style.css" rel="stylesheet" type="text/css"  media="only screen
+	and (min-width: 481px) , only screen and (min-device-width: 481px)" />
+
+	<link rel="stylesheet" type="text/css" media="only screen and (max-width: 320px), only screen and (max-device-width: 480px)"
+	 href="phone.css" />
+
+	<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.min.js"> -->
+	<!-- production -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.common.dev.js">
+	</script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="sticky">
+      <div class="top">
+          <div class="buttons">
+              <button class="button" @click="tab='welcome'">Welcome!</button>
+              <button class="button" @click="tab='portfolio'">Portfolio</button>
+              <button class="button" @click="tab='booking'">Booking Information</button>
+        </div>
+        <div class="headTitleWrap">
+          <p class="headTitle">Grace Madonna Photography</p>
+        </div>
+      </div>
+
+      <div class="line"></div>
+    </div>
+
+
+
+
+
+
+
+
+    <div v-if="tab=='welcome'">
+
+      <div class="headWrapper">
+        <h3 class="head">A Little Bit About Me</h3>
+        <p class="bio">Hello! My name is Grace Madonna and I'm a Massachusetts based photographer. I mostly photograph portraits, but I also enjoy photographing nature and landscapes. My goal is to always make my shoots relaxed and comfortable so you feel as confident as possible in the art we create together. If you are interested in setting up a shoot, you can take a look at my booking information. Check out my work in the portfolio page!</p>
+      </div>
+
+      <div class="wrapper">
+
+        <div class="icons">
+          <a href="http://instagram.com/gelise16" class="iconlink">
+            <img class="insta" src="images/insta.png">
+          </a>
+          <a href="mailto:grace.madonna.pic@gmail.com" class="iconlink">
+            <img class="email" src="images/email.png">
+          </a>
+        </div>
+
+      <div class="headWrapper">
+
+        <h3 class="head head2">My Journey</h3>
+
+        <h4 class="h4">October 2014</h4>
+        <p>When I was a tiny 13 year old, I was waiting to be picked up at the mall during sunset and thought it was so beautiful that I had to capture it. I pulled out my iTouch and snapped these three photos.</p>
+        <div class="mallpics">
+          <img class="mallpic" src="images/yellowflowers.jpg">
+          <img class="mallpic" src="images/redflowers.jpg">
+          <img class="mallpic" src="images/sunset.jpg">
+        </div>
+        <p>These photos sparked a passion in me that I didn't know I had, jumpstarting everything I am today. Immediately I began taking pictures of everything around me with that iTouch and putting terrible filters on all of them. After some time, my parents saw that I was committed and actually wanted to stick with this passion, which was something I generally didn't do as a kid. And after a couple months of begging, I got my first camera!</p>
+
+        <h4 class="h4">January 2015</h4>
+        <p>We did hours of research and came to the conclusion and made the decision to get a cute little black Fuji Film that I used to take pictures of everything while sitting in the backseat of my parents' cars. I took a local photography class to learn how to use all the different settings and buttons and fell in love with the endless possibilities.</p>
+
+        <h4 class="h4">December 2015</h4>
+        <p>Nearly a year had passed of me capturing everything in my vision, and Christmas was coming up, and I knew the only thing a wanted was a real professional camera. After looking at a consumer reports magazine, we decided that the Nikon D3300 had the the best deal for it's price. On Christmas morning I opened up my beautiful new camera and got so excited that I shoved the battery in backwards. I now had to wait three days to actually use it becuase we had to send it to a shop to fix it for me. I was pretty bummed about that. But then I got it back! And I took a bunch of photos of my lovely dog, Mazi. They were way too dark and completely unedited, but I was thrilled with them at the time.</p>
+        <img class="mazipic" src="images/mazi.jpg">
+
+        <h4 class="h4">December 2015 - June 2018</h4>
+        <p>Once I got my current camera, I used it a lot! I typically took breaks over the winter, then would pick it up again when it got warm out, but I loved it. I edited with some crappy phone apps that had hundreds of filters that I downloaded for free. They were technically called video LUTs, actually. My instagram was a mess with nothing making it look cohesive, but I was learning to find my style.</p>
+
+        <h4 class="h4">July 2018 and December 2018</h4>
+        <p>For my 17th birthday and that year's Christmas, I was dead set on getting everything I could to improve my photography. I wanted lightroom more than anything for better editing and decided I needed a prism and rainbow catcher. I got lightroom early, before my birthday, so I could use it to edit photos from when the family went to Colorado. I downloaded a bunch of free presets that after about a week, I never touched again. Then I got to play with my prism after opening it on Christmas! They both changed my life.</p>
+        <img class="coloradoprism" src="images/colorado.jpg">
+        <img class="coloradoprism" src="images/prism.jpg">
+
+        <h4 class="h4">Today</h4>
+        <p>Now I am doing more photoshoots than ever and improving with every single one. Everywhere I look, I think about how my current location or a place on tv would look in a photo. My world is through a lens and I'd love it if you'd allow me the pleasure of capturing you in it!</p>
+      </div>
+
+          <div class="footer"></div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div v-if="tab=='portfolio'">
+
+      <h3 class="head">Portfolio</h3>
+
+        <div class="wrapper">
+          <div v-for="gallery in galleries" class="box">
+            <a @click="selectGallery(gallery)" class="gallery">
+            <img :src="gallery.path+ '/'+gallery.coverImage" class="img">
+            <div class="container">
+              <p class="title">{{gallery.collectionName}}</p>
+                <div class="second">
+                  <p class="model">{{gallery.model}}</p>
+                  <div class="divider"></div>
+                  <p class="date">{{gallery.date}}</p>
+                </div>
+                </div>
+              </a>
+          </div>
+
+          <div class="footer"></div>
+          </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <div v-if="tab=='booking'">
+
+      <div class="wrapper">
+
+        <div class="headWrapper">
+        <h3 class="head">Want to Book a Shoot?</h3>
+        </div>
+
+        <h4 class="h4">How to Contact Me With Any Inquiries</h4>
+          <ul>
+            <li class="contact">Email me at
+              <a href="mailto:grace.madonna.pic@gmail.com">grace.madonna.pic@gmail.com</a>
+            </li>
+            <li class="contact">Direct Message me through my instagram
+              <a href="instagram.com/gelise16">@gelise16</a>
+            </li>
+          </ul>
+
+        <h4 class="h4">Aesthetics Based Photoshoot</h4>
+          <ul class="details">
+            <li>$30 for a day with no time constraint</li>
+            <li>Any amount of people/animals</li>
+            <li>Could be one or multiple locations</li>
+            <li>Based around my usual aesthetics that you can have input on if you have ideas</li>
+            <li>I'll use my personal editing style in post</li>
+            <li>I'll send all edited digital files via WeTransfer</li>
+          </ul>
+
+        <h4 class="h4">Senior Portraits</h4>
+          <ul class="details">
+            <li>$50 for a day with no time constraint if one person or one location</li>
+            <li>Every aditional person and/or location that I must drive to adds $50</li>
+            <li>Based around the portrait-specific aesthetics you personally want</li>
+            <li>I will use whatever editing style you request; that could be my personal style, a cleaner brighter style that most senior portraits have, or another style you request</li>
+            <li class="last">I'll send the 15 best edited digital files from each $50 increment of photos via WeTransfer or your preferred method of file transfer</li>
+          </ul>
+
+					<h4 class="h4">We Just Finished A Photoshoot... What Now?</h4>
+	          <ul class="details">
+	            <li>I will do my best to edit the images as soon as possible. Some shoots are easier to edit than others- feel free to bug me about it if it seems like I forgot!</li>
+	            <li>I'll text you the images or find a different way to get them to you, like email, if you don't have an iPhone</li>
+	            <li>Feel free to post or use the images as you please so long as you are giving me credit as the artist :) If it's a post on social media, tag my intstagram <a href="instagram.com/gelise16">@gelise16</a></li>
+	            <li class="last">If you enjoyed your experience and images, tell your friends! :)</li>
+	          </ul>
+
+          <div class="footer"></div>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div v-if="tab=='gallery'">
+
+      <div class="headWrapper">
+
+        <h3 class="head">{{gallery.collectionName}}</h3>
+
+        <div class="bio margin">
+          <p class="model">{{gallery.model}}</p>
+          <div class="divider"></div>
+          <p class="date">{{gallery.date}}</p>
+        </div>
+
+				<div tabindex="0" class="slideshow" v-if="slidenum > -1"
+					@keyup.left="imageBack()" @keyup.right="imageForward()" @keyup.esc="slidenum=-1" ref="slide">
+					<div class="slideshowHeader">Grace Madonna Photography</div>
+					<div @click="slidenum=-1" class="exitSlides">x</div>
+					<div @click="imageBack()" class="lastNextButtons lastButton">Previous</div>
+						<div class="slideImageWrap">
+							<img :src="gallery.images[slidenum].original" class="curSlideImage">
+						</div>
+					<div @click="imageForward()" class="lastNextButtons nextButton">Next</div>
+				</div>
+
+      </div>
+
+
+      <div class="galWrapper justify">
+
+        <img v-for="image, n in gallery.images" :src="image[1200]" @click="slidenum = n" class="imggal">
+
+      </div>
+      <div class="footer"></div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    </div>
+  </body>
+	<script src="galleries.js"></script>
+  <script src="script.js"></script>
+</html>

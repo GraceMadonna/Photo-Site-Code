@@ -1,0 +1,201 @@
+/* general */
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates|Montserrat:300');
+
+.top {
+  width: 90%;
+  margin: auto;
+}
+
+.wrapper {
+  width: 90%;
+  margin: auto;
+}
+
+/*https://css-tricks.com/almanac/properties/s/scrollbar/*/
+body::-webkit-scrollbar-thumb {
+  background-color: #5a5a5a;
+  outline: 1px solid #5a5a5a;
+}
+
+body {
+  margin: 0px;
+}
+/*-----scrollbar-----*/
+
+/*-----general-----*/
+
+
+/* Welcome page */
+/* header */
+
+.buttons {
+  margin: auto;
+  margin-top: 20px;
+}
+
+.button {
+    background-color: white;
+    border: solid #5a5a5a 2px;
+    color: #5a5a5a;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10pt;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin: 2px;
+}
+/*----header----*/
+
+/* masthead */
+.head {
+  color: #5a5a5a;
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 27pt;
+  margin-bottom: 25px;
+  margin-top: 50px;
+}
+
+.bio {
+  width: 95%;
+  margin: auto;
+  color: #5a5a5a;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12pt;
+  text-align: center;
+}
+
+.icons {
+ margin: auto;
+ width: 85px;
+}
+
+.insta, .email {
+  position: relative;
+  width: 20px;
+  padding: 10px;
+  vertical-align: -webkit-baseline-middle;
+}
+
+a.gallery, a.iconlink {
+ text-decoration: none;
+}
+
+.mallpic, .mazipic, .coloradoprism {
+  width: 100%;
+}
+
+/*----masthead----*/
+
+/* gallery */
+
+.row {
+  width: 100%;
+  margin: auto;
+}
+
+.box {
+  width: 100%;
+  margin: auto;
+}
+
+.img {
+  width: 100%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.container {
+  margin-top: -5px;
+  border: solid #5a5a5a 2px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.second {
+  text-align: center;
+}
+
+.divider {
+  width: 1px;
+  height: 20px;
+  background-color: #5a5a5a;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.model, .date {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.lastimage {
+  margin-bottom: 50px;
+}
+/*-----gallery-----*/
+/*-----welcome page-----*/
+
+/* booking page */
+ul, li, h4, p {
+  color: #5a5a5a;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12pt;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+a {
+  color: #5a5a5a;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 15pt;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+
+li {
+  margin-bottom: 13px;
+}
+
+/* https://www.w3.org/Style/Examples/007/color-bullets.en.html */
+ul {
+  list-style: none;
+  padding-left: 2px;
+}
+
+li::before {
+  /* http://www.i2symbol.com/symbols/flowers */
+  content: "✽";
+  /*-----flower-----*/
+  size: 6px;
+  position: absolute;
+  left: -15px;
+  }
+/*-----bullet styling-----*/
+
+.last {
+  margin-bottom: 50px;
+}
+/*-----booking page-----*/
+
+/* gallery page */
+.imggal {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: auto;
+}
+/*-----gallery page-----*/

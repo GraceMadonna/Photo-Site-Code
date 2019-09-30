@@ -1,0 +1,377 @@
+
+/* general */
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates|Montserrat:300');
+
+.sticky {
+ position: fixed;
+ background-color: white;
+ z-index: 3;
+ top: -14px;
+ width: 100%;
+ height: 75px;
+}
+
+.top {
+  width: 1400px;
+  margin: auto;
+}
+
+.headWrapper {
+  width: 800px;
+  margin: auto;
+}
+
+/*https://css-tricks.com/almanac/properties/s/scrollbar/*/
+body::-webkit-scrollbar-thumb {
+  background-color: #5a5a5a;
+  outline: 1px solid #5a5a5a;
+}
+/*-----scrollbar-----*/
+
+/*-----general-----*/
+
+
+/* Welcome page */
+/* header */
+/* w3schools for button things*/
+.button {
+    background-color: white;
+    border: solid #5a5a5a 2px;
+    color: #5a5a5a;
+    border-radius: 5px;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13pt;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin: 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #5a5a5a;
+    color: white;
+}
+
+.buttons {
+  margin: 25px 0px 0px 50px;
+  display: inline-block;
+}
+
+.headTitleWrap {
+  float: right;
+}
+
+.headTitle {
+  color: #5a5a5a;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 20pt;
+  display: inline-block;
+  margin-right: 50px;
+  right: 0px;
+}
+
+.line {
+  width: 100%;
+  Height: 4px;
+  position: relative;
+  Top: -6px;
+  background-color: #5a5a5a;
+}
+/*----header----*/
+
+/* masthead */
+.head {
+  color: #5a5a5a;
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 38pt;
+  margin-bottom: 25px;
+  margin-top: 130px;
+}
+
+.head2 {
+  margin-top: 55px;
+}
+
+.bio {
+  width: 700px;
+  margin: auto;
+  /* from a comment on stack overflow*/
+  text-align: justify;
+  -moz-text-align-last: center;
+  text-align-last: center;
+  /*------*/
+  color: #5a5a5a;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13pt;
+}
+
+.icons {
+ margin: auto;
+ width: 85px;
+}
+
+.insta, .email {
+  position: relative;
+  width: 20px;
+  padding: 10px;
+  vertical-align: -webkit-baseline-middle;
+}
+
+a.gallery, a.iconlink {
+ text-decoration: none;
+}
+
+.mallpic {
+  width: 30.5%;
+  margin: 25px 10px 25px 10px;
+}
+
+.mallpics {
+  margin: auto;
+}
+
+.mazipic {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.coloradoprism {
+  width: 47%;
+  margin: 25px 10px 25px 10px;
+}
+/*----masthead----*/
+
+/* gallery */
+.wrapper {
+ width: 1000px;
+ margin: auto;
+}
+
+.row {
+  width: 100%;
+  margin: auto;
+}
+
+.box {
+  width: 31%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 50px 10px 0px 10px;
+}
+
+.img {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.container {
+  margin-top: 0px;
+  border: solid #5a5a5a 2px;
+}
+
+/* hover stuff - you helped - thank you! */
+.box:hover {
+  background-color: #5a5a5a;
+  cursor: pointer;
+  transition-duration: .4s;
+}
+
+.box:hover .container {
+  border-color: #181818;
+}
+
+.box:hover p{
+ color: white;
+}
+
+.box:hover .divider{
+ background-color: white;
+}
+/*----hover stuff-----*/
+
+.title {
+  text-align: center;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.second {
+  text-align: center;
+}
+
+.divider {
+  width: 1px;
+  height: 20px;
+  background-color: #5a5a5a;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: 18px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.model, .date {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.row2 {
+  margin-bottom: 150px;
+}
+/*-----gallery-----*/
+/*-----welcome page-----*/
+
+/* booking page */
+ul, li, h4, p {
+  color: #5a5a5a;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13pt;
+  position: relative;
+}
+
+a {
+  color: #5a5a5a;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 15pt;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+
+li {
+  margin-bottom: 13px;
+}
+
+/* https://www.w3.org/Style/Examples/007/color-bullets.en.html */
+ul {
+  list-style: none
+}
+
+li::before {
+  /* http://www.i2symbol.com/symbols/flowers */
+  content: "✽";
+  /*-----flower-----*/
+  size: 6px;
+  position: absolute;
+  left: -15px;
+  }
+/*-----bullet styling-----*/
+
+
+/*-----booking page-----*/
+
+/* gallery page */
+.justify {
+  text-align: justify;
+}
+.margin {
+  margin-bottom: 50px;
+}
+
+.galWrapper {
+ width: 95%;
+ max-width: 1250px;
+ margin: auto;
+}
+
+.imggal {
+  height: 248px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 20px;
+  cursor: pointer;
+}
+
+/*https://stackoverflow.com/questions/1464934/text-align-justify-and-images*/
+.imggal:after{
+  content:"";
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  }
+/*-----justify images-----*/
+
+.slideshow {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0px;
+  left: 0px;
+  z-index: 4;
+
+}
+.slideshowHeader {
+  color: #5a5a5a;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 20pt;
+  display: inline-block;
+  top: 20px;
+  position: absolute;
+}
+
+.slideImageWrap {
+  height:550px;
+  width: 825px;
+}
+
+.curSlideImage {
+  height: 100%;
+  display: block;
+  margin: auto
+}
+
+.exitSlides {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.lastNextButtons {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  padding: 10px 15px;
+  border: 2px #5a5a5a solid;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 90px;
+  text-align: center;
+}
+
+.lastNextButtons:hover {
+    background-color: #5a5a5a;
+    color: white;
+}
+
+.lastButton {
+  margin-right: 60px;
+  margin-left: 20px;
+
+}
+
+.nextButton {
+  margin-left: 60px;
+  margin-right: 20px;
+}
+
+/*-----gallery page-----*/
+
+.footer {
+  height: 100px;
+}
